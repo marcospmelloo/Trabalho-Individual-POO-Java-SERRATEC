@@ -33,8 +33,7 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("SAQUE");
-                    contSaque++;
-                    if(contSaque > 3) {
+                    if(contSaque >= 3) {
                         System.out.println("Operação inválida! Limite de saques diários atingido!");
                     }
                     else {
@@ -48,6 +47,7 @@ public class Main {
                         }
                         else {
                             saldoTotal -= saque;
+                            contSaque++;
                             System.out.println("Saque realizado com sucesso!");
                         }
                     }
@@ -60,5 +60,7 @@ public class Main {
                     System.out.println("Opção inválida!");
             }
         }while(opcao != 0);
+
+        sc.close();
     }
 }
