@@ -47,7 +47,8 @@ public class Pedido {
                     .append("\nData: ")
                     .append(dataHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")))
                     .append("\nCliente: ")
-                    .append(cliente.getNome());
+                    .append(cliente.getNome())
+                    .append("\n");
 
             sb.append("\nTOTAL DO PEDIDO")
                     .append("\nSubtotal: R$")
@@ -55,7 +56,8 @@ public class Pedido {
                     .append("\nValor do frete: R$")
                     .append(this.frete)
                     .append("\nValor total do pedido: R$")
-                    .append(this.valorTotal);
+                    .append(this.valorTotal)
+                    .append("\n");
 
         return sb.toString();
     }
