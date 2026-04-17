@@ -8,10 +8,10 @@ public class Main {
         int opcao = 0, contSaque = 0;
 
         System.out.println("Seja Bem-Vindo ao Banco Itaú!");
-        System.out.println(" ");
-        System.out.println("Selecione uma das opções abaixo:");
+        System.out.println();
 
         do{
+            System.out.println("Selecione uma das opções abaixo:");
             System.out.println("1 - Ver Saldo");
             System.out.println("2 - Depositar");
             System.out.println("3 - Sacar");
@@ -21,7 +21,7 @@ public class Main {
             switch(opcao){
                 case 1:
                     System.out.println("Seu saldo atual é de: " + saldoTotal);
-                    System.out.println(" ");
+                    System.out.println();
                     break;
                 case 2:
                     System.out.println("DEPÓSITO");
@@ -29,7 +29,7 @@ public class Main {
                     double deposito = sc.nextDouble();
                     saldoTotal += deposito;
                     System.out.println("Depósito realizado com sucesso!");
-                    System.out.println(" ");
+                    System.out.println();
                     break;
                 case 3:
                     System.out.println("SAQUE");
