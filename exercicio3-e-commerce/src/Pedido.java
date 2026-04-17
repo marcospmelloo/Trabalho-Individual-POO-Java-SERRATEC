@@ -9,6 +9,7 @@ public class Pedido {
     private List<ItemPedido> itens;
     private double frete;
     private double valorTotal;
+    private double subtotal;
 
     public Pedido(String id, Cliente cliente) {
         this.id = id;
@@ -17,6 +18,23 @@ public class Pedido {
         this.itens = new ArrayList<>();
         this.frete = 0.0;
         this.valorTotal = 0.0;
+        this.subtotal = 0.0;
+    }
+
+    public double fecharPedido(){
+        for (ItemPedido item : itens) {
+            subtotal += item.getTotal();
+        }
+
+        if (subtotal > 250.0) {
+            frete = 0.0;
+            System.out.println("Frete grátis para pedidos acima de R$250,00");
+        } else {
+            frete = 25.0;
+            System.out.println("Frete de R$25,00");
+        }
+
+        return valorTotal = subtotal + frete;
     }
 
     public String getId() {
