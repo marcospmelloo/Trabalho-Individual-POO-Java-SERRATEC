@@ -9,6 +9,11 @@ public class ItemPedido {
         this.total = total;
     }
 
+    @Override
+    public String toString() {
+        return nome;
+    }
+
     public String getNome() {
         return nome;
     }

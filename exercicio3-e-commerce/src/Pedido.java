@@ -48,6 +48,8 @@ public class Pedido {
                     .append(dataHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")))
                     .append("\nCliente: ")
                     .append(cliente.getNome())
+                    .append("\nItens: ")
+                    .append(getItens().toString())
                     .append("\n");
 
             sb.append("\nTOTAL DO PEDIDO")
