@@ -27,8 +27,13 @@ public class Main {
                     System.out.println("DEPÓSITO");
                     System.out.println("Quanto você deseja depositar?");
                     double deposito = sc.nextDouble();
-                    saldoTotal += deposito;
-                    System.out.println("Depósito realizado com sucesso!");
+                    if(deposito <= 0){
+                        System.out.println("Seu depósito deve iniciar com um valor maior que zero!");
+                    }
+                    else{
+                        saldoTotal += deposito;
+                        System.out.println("Depósito realizado com sucesso!");
+                    }
                     System.out.println();
                     break;
                 case 3:
