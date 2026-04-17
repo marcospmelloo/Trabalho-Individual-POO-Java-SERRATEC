@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,13 +29,35 @@ public class Pedido {
 
         if (subtotal > 250.0) {
             frete = 0.0;
-            System.out.println("Frete grátis para pedidos acima de R$250,00");
         } else {
             frete = 25.0;
-            System.out.println("Frete de R$25,00");
         }
 
         return valorTotal = subtotal + frete;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+            sb.append("--------------")
+                    .append("RECIBO")
+                    .append("--------------")
+                    .append("\nId do pedido: ")
+                    .append(this.id)
+                    .append("\nData: ")
+                    .append(dataHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")))
+                    .append("\nCliente: ")
+                    .append(cliente.getNome());
+
+            sb.append("\nTOTAL DO PEDIDO")
+                    .append("\nSubtotal: R$")
+                    .append(this.subtotal)
+                    .append("\nValor do frete: R$")
+                    .append(this.frete)
+                    .append("\nValor total do pedido: R$")
+                    .append(this.valorTotal);
+
+        return sb.toString();
     }
 
     public String getId() {
