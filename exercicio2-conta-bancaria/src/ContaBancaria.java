@@ -11,7 +11,13 @@ public class ContaBancaria {
     }
 
     public void depositar(double deposito){
-        saldo += deposito;
+        if(deposito <= 0){
+            System.out.println("Seu depósito deve iniciar com um valor maior que zero!");
+        }
+        else {
+            saldo += deposito;
+            System.out.println("Depósito realizado com sucesso!");
+        }
     }
 
     public boolean sacar(double saque){

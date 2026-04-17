@@ -38,7 +38,6 @@ public class Main {
                     System.out.println("Quanto você deseja depositar?");
                     double deposito = sc.nextDouble();
                     conta.depositar(deposito);
-                    System.out.println("Depósito realizado com sucesso!");
                     System.out.println();
                     break;
                 case 3:
