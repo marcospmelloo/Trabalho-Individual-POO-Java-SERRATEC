@@ -4,8 +4,8 @@ public final class Caminhao extends Veiculo{
     private final double capacidadeCargaToneladas;
 
     public Caminhao(String placa, String marca, double valorLocacaoDiaria,
-                    int anoFabricacao, double precoFipe, double capacidadeCargaToneladas){
-        super(placa, marca, valorLocacaoDiaria, anoFabricacao, precoFipe);
+                    int anoFabricacao, double precoFipe, Combustivel combustivel, double capacidadeCargaToneladas){
+        super(placa, marca, valorLocacaoDiaria, anoFabricacao, precoFipe, combustivel);
         if (capacidadeCargaToneladas <= 0)
             throw new IllegalArgumentException("A capacidade de carga deve ser maior que zero!");
         this.capacidadeCargaToneladas = capacidadeCargaToneladas;
