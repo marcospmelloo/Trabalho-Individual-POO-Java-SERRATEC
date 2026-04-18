@@ -45,4 +45,20 @@ public abstract sealed class Veiculo implements Fretavel, Tributavel permits Cam
     public double getPrecoFipe() {
         return precoFipe;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+                sb.append("Placa: ")
+                        .append(getPlaca())
+                        .append("\nMarca: ")
+                        .append(getMarca())
+                        .append("\nValor da locação diária: ")
+                        .append(getValorLocacaoDiaria())
+                        .append("\nAno de fabricação: ")
+                        .append(getAnoFabricacao())
+                        .append("\nPreço FIPE: ")
+                        .append(getPrecoFipe());
+        return sb.toString();
+    }
 }

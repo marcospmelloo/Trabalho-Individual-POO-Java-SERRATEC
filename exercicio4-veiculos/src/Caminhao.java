@@ -34,4 +34,8 @@ public final class Caminhao extends Veiculo{
         }
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\nCapacidade de toneladas: " + capacidadeCargaToneladas;
+    }
 }

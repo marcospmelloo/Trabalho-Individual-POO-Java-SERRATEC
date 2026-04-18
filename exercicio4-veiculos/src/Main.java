@@ -4,8 +4,11 @@ public class Main {
             Caminhao c1 = new Caminhao("ABC1234", "Volvo", 500, 2018, 250000, 10);
 
             System.out.println("Caminhão:");
+            System.out.println(c1);
+            System.out.println("--------------------");
             System.out.println("Aluguel: R$" + c1.alugarVeiculo(12, 3));
             System.out.println("IPVA: R$" + c1.calcularIPVA());
+            System.out.println("--------------------");
         } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
         }
@@ -16,8 +19,11 @@ public class Main {
             CarroPasseio c2 = new CarroPasseio("XYZ5678", "Fiat", 150, 1999, 20000);
 
             System.out.println("Carro:");
+            System.out.println(c2);
+            System.out.println("--------------------");
             System.out.println("Aluguel: R$" + c2.alugarVeiculo(0, 5));
             System.out.println("IPVA: R$" + c2.calcularIPVA());
+            System.out.println("--------------------");
         } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
         }
@@ -28,8 +34,11 @@ public class Main {
             Caminhao c3 = new Caminhao("ABC321", "Scania", -150, 2000, 300000, 12);
 
             System.out.println("Caminhão:");
+            System.out.println(c3);
+            System.out.println("--------------------");
             System.out.println("Aluguel: R$" + c3.alugarVeiculo(15, 5));
             System.out.println("IPVA: R$" + c3.calcularIPVA());
+            System.out.println("--------------------");
         } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
         }
