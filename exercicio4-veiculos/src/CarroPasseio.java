@@ -9,6 +9,10 @@ public final class CarroPasseio extends Veiculo{
 
     @Override
     public double alugarVeiculo(double pesoCarga, int dias) {
+        if (pesoCarga < 0)
+            throw new IllegalArgumentException("O peso da carga não pode ser negativo!");
+        if (dias <= 0)
+            throw new IllegalArgumentException("O número de dias deve ser maior do que zero!");
         return getValorLocacaoDiaria() * dias;
     }
 

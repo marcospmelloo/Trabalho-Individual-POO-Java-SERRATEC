@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Date;
 
 public final class Caminhao extends Veiculo{
     private final double capacidadeCargaToneladas;
@@ -7,11 +6,17 @@ public final class Caminhao extends Veiculo{
     public Caminhao(String placa, String marca, double valorLocacaoDiaria,
                     int anoFabricacao, double precoFipe, double capacidadeCargaToneladas){
         super(placa, marca, valorLocacaoDiaria, anoFabricacao, precoFipe);
+        if (capacidadeCargaToneladas <= 0)
+            throw new IllegalArgumentException("A capacidade de carga deve ser maior que zero!");
         this.capacidadeCargaToneladas = capacidadeCargaToneladas;
     }
 
     @Override
     public double alugarVeiculo(double pesoCarga, int dias) {
+        if (pesoCarga < 0)
+            throw new IllegalArgumentException("O peso da carga não pode ser negativo!");
+        if (dias <= 0)
+            throw new IllegalArgumentException("O número de dias deve ser maior do que zero!");
         double total = getValorLocacaoDiaria() * dias;
         if (pesoCarga > capacidadeCargaToneladas) {
             total += total * 0.10;
