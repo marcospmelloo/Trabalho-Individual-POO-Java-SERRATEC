@@ -54,11 +54,11 @@ public class Pedido {
 
             sb.append("\nTOTAL DO PEDIDO")
                     .append("\nSubtotal: R$")
-                    .append(this.subtotal)
+                    .append(String.format("%.2f", this.subtotal))
                     .append("\nValor do frete: R$")
-                    .append(this.frete)
+                    .append(String.format("%.2f", this.frete))
                     .append("\nValor total do pedido: R$")
-                    .append(this.valorTotal)
+                    .append(String.format("%.2f", this.valorTotal))
                     .append("\n");
 
         return sb.toString();
